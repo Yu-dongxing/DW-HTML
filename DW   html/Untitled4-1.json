@@ -1,0 +1,13 @@
+function myfunction(){
+    var x=10,y=5,Exper1=(x>y),Exper2=(y>x);
+    document.write("<PRE>");
+    document.write("x的值是: " +x+" 而y的值是: "+y);
+    document.write("\n\n Exper1(10>5)的值是: " + Exper1 + " 而Exper2 (5>10) 的值是: "+ Exper2);
+    document.write("\n\n Exper1 AMD Exper2= " +(Exper1 && Exper2));
+    document.write("\n\n Exper1 OR Exper2 = " +(Exper1 || Exper2));
+    document.write("\n\n NOT Exper2= " +(!Exper2));
+    document.write("</PRE>");
+    }
+function myfunction(){
+    document.getElementById("yuxs").innerHTML="yudongxing";
+}

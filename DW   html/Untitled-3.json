@@ -1,0 +1,21 @@
+window.onload=function()
+{
+	let divTyping = document.getElementById('etext')
+	let i = 0,
+		timer = 0,
+		str = 'YUXS'
+	function typing()
+	{
+		if (i <= str.length)
+		{
+			divTyping.innerHTML = str.slice(0, i++) + '_'
+			timer = setTimeout(typing, 120)
+		}else
+		 {
+			divTyping.innerHTML = str
+			clearTimeout(timer)
+		}
+	}
+	typing();
+	setTimeout(function(){$("#xuna").show();},8000);
+}
