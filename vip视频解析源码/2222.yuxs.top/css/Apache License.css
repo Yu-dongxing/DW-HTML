@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+
+a:link {
+    text-decoration: none;
+    color: #9500FF;
+}
+a:visited {
+    text-decoration: none;
+    color: #000000;
+}
+a:hover {
+    text-decoration: none;
+}
+a:active {
+    text-decoration: none;
+}
+    .sb:link {
+    text-decoration: none;
+    color: #FF0000;
+}
+    .sb:visited {
+    text-decoration: none;
+    color: #000000;
+}

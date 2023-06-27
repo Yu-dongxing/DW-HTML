@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <title>VIP视频解析</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="https://i2.100024.xyz/2022/10/04/gx7558.webp" />
+    <link href="/css/bfq.css" rel="stylesheet" type="text/css">
+    <script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="/js/vip.js"></script>
+    <script src="/js/bd.js"></script>
+</head>
+<body>
+<br />
+<div class="container" style="padding-top:0px;" id="wbk">
+    <div class="alert alert-success alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert"> 
+           <span aria-hidden="true">&times;</span>
+             <span class="sr-only">Close</span>
+               </button>
+        <strong>将视频网站链接（例如：爱奇艺、腾讯视频、优酷、土豆、芒果TV等，支持解析M3U8链接）粘贴到视频地址输入框之后点击播放按钮即可。</strong>
+    </div>
+    <div class="col-md-14 column">
+        <div class="panel panel-default">
+            <div id="kj" class="panel-body">
+                <iframe src="" id="player" width="100%" height="600px" allowfullscreen='true' allow="autoplay" allowtransparency="true" frameborder="0" scrolling="no"> </iframe>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-14 column">
+        <form method="get">
+            <div class="input-group" style="width: 100%;">
+                <span class="input-group-addon input-lg" style="width: 80px; ">选择解析</span>
+                <select class="form-control input-lg" id="jk">
+                    
+                    <option rel="nofollow" value="https://jx.777jiexi.com/player/?url=" selected="">77解析</option>
+                    <option rel="nofollow" value="https://jx.qqqjx.com/?url=">咸鱼解析</option>
+                    <option rel="nofollow" value="https://jx.ppflv.com/?url=">咸鱼备用解析</option>
+                    <option rel="nofollow" value="https://ddjx.cc/?url=">蛋蛋解析</option>
+                    <!--<option rel="nofollow" value="https://okjx.cc/?url=">OK解析</option>
+                    https://www.8090.la/8090/?url=
+                    
+                    -->
+                    <option rel="nofollow" value="https://jx.xmflv.com/?url=">虾米解析</option>
+                    <option rel="nofollow" value="https://www.pouyun.com/?url=">剖云解析</option>
+                    <option rel="nofollow" value="https://jx.qqwtt.com/?url=">剖云备用解析</option>
+                    <option rel="nofollow" value="https://parse.mw0.cc/?url=">铭人解析</option>
+                    <option rel="nofollow" value="https://parse.123mingren.com/?url=">铭人备用解析</option>
+                    <option rel="nofollow" value="https://www.pangujiexi.com/pangu/?url=">盘古解析</option>
+                    <option rel="nofollow" value="https://sb.5gseo.net/?url=">云端视频解析</option>
+                    <option rel="nofollow" value="https://jx.aidouer.net/?url=">云解析</option>
+                    <option rel="nofollow" value="https://www.mtosz.com/m3u8.php?url=">Mao解析</option>
+                    <option rel="nofollow" value="https://jx.m3u8.tv/jiexi/?url=">m3u8视频解析</option>
+                    <option rel="nofollow" value="https://vip.bljiex.com/?v=">BL解析(可直接输入影片名称)</option>
+                    <option rel="nofollow" value="https://www.administratorw.com/video.php?url=">无名小站解析</option>
+                    <option rel="nofollow" value="https://www.8090g.cn/?url=">8090解析</option>
+                    <option rel="nofollow" value="https://www.8090g.cn/jiexi/?url=">8090备用解析</option>
+                    <option rel="nofollow" value="https://www.1717yun.com/jx/vip/index.php?url=">1717解析</option>
+                    <option rel="nofollow" value="https://www.ckmov.com/?url=">ckmov解析</option>
+                    <option rel="nofollow" value="https://www.ckmov.vip/api.php?url=">ckmov备用解析</option>
+                    <option rel="nofollow" value="https://yparse.jn1.cc/?url=">步步高解析</option>
+                    <option rel="nofollow" value="https://jx.m3u8.tv/jiexi/?url=">无广告解析</option>
+                    <option rel="nofollow" value="https://www.xymav.com/?url=">七七解析（暂时不可用）</option>
+                    <option rel="nofollow" value="https://2.08bk.com?v=">小七解析</option>
+                    <option rel="nofollow" value="https://jx.jsonplayer.com/player/?url=">Parwix解析</option>
+                    <option rel="nofollow" value="https://api.v6.chat/?url=">音萌解析</option>
+                    <option rel="nofollow" value="https://jx.iztyy.com/svip/?url=">云逸解析</option>
+                    <option rel="nofollow" value="https://im1907.top/?jx=">M1907云加速(可直接输入影片名称）</option>
+                    <option rel="nofollow" value="https://im1907.top/?jx=">(备用)M1907云加速</option>
+                </select>
+            </div>
+            <br />
+            <div class="input-group" style="width: 100%;">
+                <span class="input-group-addon input-lg" style="width: 80px;">播放地址</span>
+                <input class="form-control input-lg" type="search" placeholder="输入播放地址" id="url" />
+            </div>
+            <br />
+            <div>
+                <button id="bf" type="button" class="btn btn-success btn-lg btn-block" onclick="dihejk()">开始播放</button>
+            </div>
+        </form>
+    </div>
+</div>
+<br />
+<div class="copyright">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-sm-12">
+                <span>Powered by:<a href="https://yuxs.top/"> YUXS</a> <br> Copyright&copy;2023 YUXS All Rights Reserved.<a href="/Agreement/Apache License.html" target="_blank" title="Apache License">Apache License</a></span>
+            <div class="container footer-tit">
+			<p>声明：本站为非盈利性站点，只提供在线WEB服务，仅供学习交流，拒绝一切商业行为，否则后果自负！所涉及资源均来源于互联网，本站不提供任何视频资源存储，也不参与录制和上传。若无意侵犯了您的版权，请及时联系管理员，管理员会第一时间核实、回复和处理，谢谢！详情请查看<a href="/Agreement/user Agreement.html" target="_blank" title="本站服务协议">网站服务协议</a></p>
+			<p>管理员邮箱：yuxs2022@163.com</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
