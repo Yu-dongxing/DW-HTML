@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script language="javascript">
+// 进入页面就执行
+window.onload=function()
+{
+	let divTyping = document.getElementById('etext')
+	let i = 0,
+		timer = 0,
+		str = 'YUXS YUXS YUXS'
+	function typing()
+	{
+		if (i <= str.length)
+		{
+			divTyping.innerHTML = str.slice(0, i++) + '_'
+			timer = setTimeout(typing, 120)
+		}else
+		 {
+			divTyping.innerHTML = str //结束打字,移除 _ 光标
+			clearTimeout(timer)
+		}
+	}
+	typing();
+	setTimeout(function(){$("#xuna").show();},8000);
+}</script>
+<title>无标题文档</title>
+</head>
+<body>
+    <div align="center" id="etext"></div>
+</body>
+</html>

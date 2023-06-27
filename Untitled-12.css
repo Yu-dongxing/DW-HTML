@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+h1{
+	padding:0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+
+a{color:#19537D;text-decoration: none; line-height:16px;}
+
+a:hover {text-decoration:underline;}
+
+
+body {
+	font-family: Arial, Helvetica;
+	font-size: 12px;
+	line-height: 22px;
+	margin: 0px;
+}
+
+.maintopbc{width:100%; clear:both; height:180px;}
+
+.maintopbc .maintop{width:100%; clear:both; background-color:#F0EFE2; height:45px;opacity:0.7;}
+
+.maintopbc .maintop .cont{width:1000px; clear:both; margin-left:auto; margin-right:auto;}
+
+.maintopbc .maintop .cont .left{ width:125px; float:left; clear:left;}
+
+.maintopbc .maintop .cont .left a{ font-size:26px; float:left; line-height:44px; height:44px;color:#5D6146; font-weight:bold;}
+
+.maintopbc .maintop .cont .left a:hover{text-decoration:none;}
+
+.maintopbc .maintop .cont .right{ width:870px; float:right; clear:right;}
+
+.maintopbc .maintop .cont .right .son1{height:45px; float:left;}
+
+.maintopbc .maintop .cont .right .son1 a{ font-size:15px; float:left; line-height:45px; height:45px; width:50px; text-align:center;color:#5D6146;}
+
+.maintopbc .maintop .cont .right .son1 a:hover{text-decoration:none;}
+
+
+

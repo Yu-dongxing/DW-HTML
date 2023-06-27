@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+
+h1{
+    text-align: center;
+}
+body{
+    margin: 20px;
+    padding: 10px;
+}
+

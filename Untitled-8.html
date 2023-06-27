@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>我的个人主页</title>
+    <style>
+        /* 定义全局样式 */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        /* 定义头部样式 */
+        header {
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+        }
+        h1 {
+            margin-top: 0;
+        }
+        /* 定义导航栏样式 */
+        nav {
+            background-color: #fff;
+            border-bottom: 1px solid #ccc;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        li {
+            float: left;
+        }
+        li a {
+            display: block;
+            color: #666;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        li a:hover:not(.active) {
+            background-color: #ddd;
+        }
+        .active {
+            background-color: #4CAF50;
+            color: white;
+        }
+        /* 定义内容区域样式 */
+        section {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        p {
+            line-height: 1.5;
+        }
+        /* 定义页脚样式 */
+        footer {
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>我的个人主页</h1>
+        <p>欢迎来到我的个人主页，这里有我的介绍、作品和联系方式。</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a class="active" href="#">首页</a></li>
+            <li><a href="#">关于我</a></li>
+            <li><a href="#">我的作品</a></li>
+            <li><a href="#">联系我</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>个人简介</h2>
+        <p>我是一名热爱编程的前端工程师，目前就职于某知名互联网公司。在这里，我将分享我的工作经验、技能和成果，并与大家探讨前端开发的最新趋势和技术。</p>
+    </section>
+    <section style="background-color: #4CAF50; color: #fff;">
+        <h2>我的作品</h2>
+        <p>以下是我近期完成的一些作品，欢迎浏览和留言。</p>
+        <ul>
+            <li><a href="#">作品1</a></li>
+            <li><a href="#">作品2</a></li>
+            <li><a href="#">作品3</a></li>
+        </ul>
+    </section>
+    <section>
+        <h2>联系我</h2>
+        <p>如果您对我的工作感兴趣，欢迎通过以下方式联系我：</p>
+        <ul>
+            <li>邮箱：example@mail.com</li>
+            <li>微信号：example123</li>
+            <li>电话：+86 1234567890</li>
+        </ul>
+    </section>
+    <footer>
+        <p>&copy; 2021 我的个人主页. All rights reserved.</p>
+    </footer>
+</body>
+</html>

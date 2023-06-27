@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>网页导航栏</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif; /* 设置字体 */
+			background-color: #f4f4f4; /* 设置背景颜色 */
+		}
+        
+		nav {
+			display: flex; /* 使用 Flex 布局 */
+			justify-content: space-between; /* 水平居中 */
+			align-items: center; /* 垂直居中 */
+			background-color: #333; /* 设置背景颜色 */
+			color: #fff; /* 设置字体颜色 */
+			padding: 10px 20px; /* 设置边距 */
+		}
+        
+		nav ul {
+			display: flex; /* 使用 Flex 布局 */
+			list-style: none; /* 去掉列表样式 */
+			margin: 0;
+			padding: 0;
+		}
+        
+		nav ul li {
+			margin-right: 20px; /* 设置元素间距 */
+		}
+        
+		nav ul li a {
+			text-decoration: none; /* 去掉下划线 */
+			color: #fff; /* 设置字体颜色 */
+			font-size: 18px; /* 设置字体大小 */
+		}
+        
+		nav ul li a:hover {
+			color: #ff0; /* 设置鼠标悬停时字体颜色 */
+		}
+        
+	</style>
+</head>
+<body>
+	<nav>
+		<h1>网站标题</h1>
+		<ul>
+			<li><a href="#">首页</a></li>
+			<li><a href="#">产品介绍</a></li>
+			<li><a href="#">新闻资讯</a></li>
+			<li><a href="#">关于我们</a></li>
+			<li><a href="#">联系我们</a></li>
+		</ul>
+	</nav>
+</body>
+</html>
