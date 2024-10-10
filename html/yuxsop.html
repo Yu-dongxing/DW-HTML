@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>YUXS的博客 - 文章管理</title>
+  <link rel="stylesheet" href="https://www.yuxs.top/zb_system/css/admin2.css?173060">
+  <link rel="stylesheet" href="https://www.yuxs.top/zb_system/css/jquery-ui.custom.css?v=173060">
+  <link rel="stylesheet" href="https://www.yuxs.top/zb_system/image/icon/icon.css?v=173060">
+</head>
+<body class="admin admin-ArticleMng">
+<header class="header">
+  <div class="logo">
+    <a href="https://www.yuxs.top/" title="YUXS的博客" target="_blank">
+      <img src="https://www.yuxs.top/zb_system/image/admin/none.gif" alt="Z-Blog">
+    </a>
+  </div>
+  <div class="user">
+    <a href="https://www.yuxs.top/zb_system/cmd.php?act=MemberEdt&amp;id=1" title="编辑">
+      <img src="http://fdn.geekzu.org/avatar/b70a46f09148634901fa6e442fca8201.png?s=60&amp;d=mm&amp;r=G" width="40" height="40" id="avatar" alt="Avatar">
+    </a>
+    <div class="username">
+      <span>管理员：admin</span>
+    </div>
+    <div class="userbtn">
+      <a class="profile" href="https://www.yuxs.top/" title="" target="_blank">
+        <i class="icon-globe2"></i> <span>返回</span>
+      </a>&nbsp;&nbsp;
+      <a class="logout" href="https://www.yuxs.top/zb_system/cmd.php?act=logout&csrfToken=b7316cc253ee5a8f839b74cdb0155240" title="">
+        <i class="icon-power"></i> <span>注销</span>
+      </a>
+    </div>
+  </div>
+  <div class="menu">
+    <ul id="topmenu">
+      <li id="topmenu1">
+        <a href="https://www.yuxs.top/zb_system/cmd.php?act=admin" target="_self" title="后台首页">
+          <i class="icon-house-door-fill"></i>
+          <span>后台首页</span>
+        </a>
+      </li>
+      <li id="topmenu2">
+        <a href="https://www.yuxs.top/zb_system/cmd.php?act=SettingMng" target="_self" title="网站设置">
+          <i class="icon-gear-fill"></i>
+          <span>网站设置</span>
+        </a>
+      </li>
+      <li id="topmenu_tpure">
+        <a href="https://www.yuxs.top/zb_users/theme/tpure/main.php?act=base" target="_self" title="主题设置">
+          <i class="icon-grid-1x2-fill"></i>
+          <span>主题设置</span>
+        </a>
+      </li>
+      <li id="topmenu4">
+        <a href="https://www.zblogcn.com/" target="_blank" title="官方网站">
+          <i class="icon-zblog-circle-fill"></i>
+          <span>官方网站</span>
+        </a>
+      </li>      
+    </ul>
+  </div>
+</header>
+<aside class="left">
+  <ul id="leftmenu">
+    <li id="nav_new"><a id="aArticleEdt" href="https://www.yuxs.top/zb_system/cmd.php?act=ArticleEdt" title="新建文章"><span><i class="icon-pencil-square-fill"></i>新建文章</span></a></li>
+    <li id="nav_article"><a id="aArticleMng" href="https://www.yuxs.top/zb_system/cmd.php?act=ArticleMng" title="文章管理"><span><i class="icon-stickies"></i>文章管理</span></a></li>
+    <li id="nav_page"><a id="aPageMng" href="https://www.yuxs.top/zb_system/cmd.php?act=PageMng" title="页面管理"><span><i class="icon-stickies-fill"></i>页面管理</span></a></li>
+    <li class='split'><hr></li>
+    <li id="nav_category"><a id="aCategoryMng" href="https://www.yuxs.top/zb_system/cmd.php?act=CategoryMng" title="分类管理"><span><i class="icon-folder-fill"></i>分类管理</span></a></li>
+    <li id="nav_tags"><a id="aTagMng" href="https://www.yuxs.top/zb_system/cmd.php?act=TagMng" title="标签管理"><span><i class="icon-tags-fill"></i>标签管理</span></a></li>
+    <li id="nav_comment"><a id="aCommentMng" href="https://www.yuxs.top/zb_system/cmd.php?act=CommentMng" title="评论管理"><span><i class="icon-chat-text-fill"></i>评论管理</span></a></li>
+    <li id="nav_upload"><a id="aUploadMng" href="https://www.yuxs.top/zb_system/cmd.php?act=UploadMng" title="附件管理"><span><i class="icon-inboxes-fill"></i>附件管理</span></a></li>
+    <li id="nav_member"><a id="aMemberMng" href="https://www.yuxs.top/zb_system/cmd.php?act=MemberMng" title="用户管理"><span><i class="icon-people-fill"></i>用户管理</span></a></li>
+    <li class='split'><hr></li>
+    <li id="nav_theme"><a id="aThemeMng" href="https://www.yuxs.top/zb_system/cmd.php?act=ThemeMng" title="主题管理"><span><i class="icon-grid-1x2-fill"></i>主题管理</span></a></li>
+    <li id="nav_module"><a id="aModuleMng" href="https://www.yuxs.top/zb_system/cmd.php?act=ModuleMng" title="模块管理"><span><i class="icon-grid-3x3-gap-fill"></i>模块管理</span></a></li>
+    <li id="nav_plugin"><a id="aPluginMng" href="https://www.yuxs.top/zb_system/cmd.php?act=PluginMng" title="插件管理"><span><i class="icon-puzzle-fill"></i>插件管理</span></a></li>
+    <li id="nav_AppCentre"><a id="aAppCentre" href="https://www.yuxs.top/zb_users/plugin/AppCentre/main.php" title="应用中心"><span><i class="icon-zblog-appcenter"></i>应用中心</span></a></li>
+  </ul>
+</aside>
+<section class="main">
+  <div id="divMain">
+    <div class="divHeader">文章管理</div>
+    <div class="SubMenu"></div>
+    <div id="divMain2">
+      <form class="search" id="search" method="post" action="#">
+        <p>搜索:&nbsp;&nbsp;分类
+          <select class="edit" size="1" name="category" style="width:140px;">
+            <option value="">任意</option>
+            <option value="1">风景</option>
+            <option value="2">生活</option>
+            <option value="3">学习</option>
+            <option value="4">文档</option>
+          </select>&nbsp;&nbsp;&nbsp;&nbsp;类型
+          <select class="edit" size="1" name="status" style="width:100px;">
+            <option value="">任意</option>
+            <option value="0">公开</option>
+            <option value="1">草稿</option>
+            <option value="2">审核</option>
+          </select>&nbsp;&nbsp;&nbsp;&nbsp;
+          <label><input type="checkbox" name="istop" value="True">&nbsp;置顶</label>&nbsp;&nbsp;&nbsp;&nbsp;
+          <input name="search" style="width:250px;" type="text" value="">
+          &nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" class="button" value="提交">
+        </p>
+      </form>
+      <form method="post" action="https://www.yuxs.top/zb_system/cmd.php?act=PostBat&type=0">
+        <table border="1" class="tableFull tableBorder table_hover table_striped tableBorder-thcenter">
+          <tr>
+            <th>ID <a class="order_button element-visibility-hidden" href="https://www.yuxs.top/zb_system/cmd.php?act=ArticleMng&amp;order=id_asc"><i style="font-size:0.75em;" class="icon-arrow-down-short"></i></a></th>
+            <th>分类 <a class="order_button element-visibility-hidden" href="https://www.yuxs.top/zb_system/cmd.php?act=ArticleMng&amp;order=cateid_asc"><i style="font-size:0.75em;" class="icon-arrow-down-short"></i></a></th>
+            <th>作者 <a class="order_button element-visibility-hidden" href="https://www.yuxs.top/zb_system/cmd.php?act=ArticleMng&amp;order=authorid_asc"><i style="font-size:0.75em;" class="icon-arrow-down-short"></i></a></th>
+            <th>标题</th>
+            <th>日期 <a class="order_button element-visibility-hidden" href="https://www.yuxs.top/zb_system/cmd.php?act=ArticleMng&amp;order=posttime_asc"><i style="font-size:0.75em;" class="icon-arrow-down-short"></i></a></th>
+            <th>评论</th>
+            <th>状态</th>
+            <th></th>
+          </tr>
+          <tr>
+            <td class="td5">1</td>
+            <td class="td10">风景</td>
+            <td class="td10">admin</td>
+            <td>
+              <a href="https://www.yuxs.top/?id=1" target="_blank"><i class="icon-link-45deg"></i></a>
+              hello，world！
+            </td>
+            <td class="td20">2022-11-01 23:05:51</td>
+            <td class="td5">0</td>
+            <td class="td5">公开</td>
+            <td class="td10 tdCenter">
+              <a href="../cmd.php?act=ArticleEdt&amp;id=1"><i class="icon-pencil-square"></i></a>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <a onclick="return window.confirm('单击“确定”继续。单击“取消”停止。');" href="https://www.yuxs.top/zb_system/cmd.php?act=ArticleDel&amp;id=1&csrfToken=b7316cc253ee5a8f839b74cdb0155240"><i class="icon-trash"></i></a>
+            </td>
+          </tr>
+        </table>
+        <hr/>
+        <p class="pagebar">
+          <a href="https://www.yuxs.top/zb_system/cmd.php?act=ArticleMng">‹‹</a>&nbsp;&nbsp;
+          <span class="now-page">1</span>&nbsp;&nbsp;
+          <a href="https://www.yuxs.top/zb_system/cmd.php?act=ArticleMng">››</a>&nbsp;&nbsp;
+        </p>
+      </form>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="fademask"></div>
+    <div class="wrap">
+      <h3>Powered By <a href="https://www.yuxs.top/" target="_blank">YUXS</a>. My E-mail: yuxs2022@163.com</h3>
+      <h4><a href="https://www.beian.miit.gov.cn/#/Integrated/index" target="_blank"> 皖ICP备2022009494号-1</a>.</h4>
+      <h5>
+        <div style="width:300px;margin:0 auto; padding:20px 0;">
+          <a target="_blank" href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=34170202000557" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+            <img src="https://www.beian.gov.cn/img/new/gongan.png" style="float:left;">
+            <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">皖公网安备 34170202000557号</p>
+          </a>
+        </div>
+      </h5>
+    </div>
+  </div>
+</section>
+<script src="https://www.yuxs.top/zb_system/script/jquery-2.2.4.min.js?v=173060"></script>
+<script src="https://www.yuxs.top/zb_system/script/zblogphp.js?v=173060"></script>
+<script src="https://www.yuxs.top/zb_system/script/c_admin_js_add.php?hash=&v=173060"></script>
+<script src="https://www.yuxs.top/zb_system/script/jquery-ui.custom.min.js?v=173060"></script>
+<script>
+  if (!window.bloghost && window.confirm("JavaScript加载失败。\n点击“确定”即可获得修复方案，点击“取消”继续。")) {
+    window.open('https://www.zblogcn.com/help/?id=89&message=');
+  }
+</script>
+</body>
+</html>

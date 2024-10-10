@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>班级资产管理系统-界面</title>
+<style type="text/css">
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.header {
+}
+.li {
+}
+li {
+    display: inline-table;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: auto;
+    height: auto;
+    /*border: 1px solid #000000;*/
+    padding: 5px;
+}
+.reli-admin {
+    float: right;
+    color: rgba(30,122,255,0.81)
+}
+.reli-admin:hover {
+    color: rgba(255,29,29,0.81)
+}
+.reli-del {
+    float: right;
+    color: rgba(255,0,4,0.66)
+}
+.head {
+    background-color: rgba(140,140,140,0.47);
+    width: 100%;
+    height: 500px;
+    position: fixed;
+}
+.XBOX {
+    height: auto;
+    width: 300px;
+    padding: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 15px;
+    margin-left: 10px;
+    position: fixed;
+    margin-top: 10px;
+}
+    .XBOX p{
+    float: right;
+    color: rgba(92,181,255,1.00);
+    }
+    .XBOX p1{
+    font-weight: 900;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 3px;
+    }
+    .txbox{
+    }
+    .footer{
+        
+    }
+    .qq{
+    position: fixed;
+    width: 100%;
+    height: auto;
+    text-align: right;
+    float: right;
+    bottom: 1px;
+    }
+</style>
+<script>  
+function downloadFile() {  
+    var fileInput = document.getElementById('fileInput'); // 确保有对应的file input元素ID  
+    var file = fileInput.files[0]; // 获取用户选择的文件  
+    if (!file) {  
+    alert('请选择一个文件');  
+    return;  
+}  
+    // 检查文件类型  
+    var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;   
+    if (!file.name.match(allowedExtensions)) {  
+        alert('请上传正确的图片文件 (JPG, JPEG, PNG, GIF)');  
+    return;  
+    }  
+    // 检查文件大小  
+    var maxFileSize = 10 * 1024 * 1024; // 10MB  
+    if (file.size > maxFileSize) {  
+        alert('文件大小不能超过 ' + maxFileSize + ' bytes');  
+    return;  
+    }  
+    var blob = fileInput.files[0]; // Blob对象表示二进制大对象，可以用来表示文件  
+    var url = URL.createObjectURL(blob); // 创建Blob对象的URL  
+    var a = document.createElement('a'); // 创建一个新的a元素  
+    var filenameInput = document.getElementById("filename");  
+    var filename = filenameInput.value;  
+    a.href = url; // 设置a元素的href属性为Blob对象的URL  
+    a.download = filename+".jpg"; // 设置下载的文件名为用户自定义的文件名  
+    document.body.appendChild(a); // 将a元素添加到文档中  
+    a.click(); // 触发点击事件开始下载  
+    //document.body.removeChild(a); // 下载完成后移除a元素  
+}  
+</script>
+</head>
+<body>
+<div class="header">
+  <div class="li">
+    <li>首页</li>
+    <li>班费管理</li>
+    <li>文件上传系统</li>
+    <li>人员管理</li>
+    <li class="reli-admin">admin</li>
+    <li class="reli-del">退出登录</li>
+  </div>
+</div>
+<div class="head">
+  <div class="XBOX">
+    <p id="continus">***发布</p>
+    <p1>文件上传系统</p1>
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+      <label for="fileInput">选择文件:</label>
+      <input type="file" name="file" id="fileInput" >
+      <br>
+      <label for="filename">确认姓名:</label>
+      <input type="text" name="filename" id="filename" value="余东兴" disabled>
+      <br>
+      <!--        value 为默认值，disabled为禁止用户输入-->
+      <input type="button" value="下载" onclick="downloadFile()">
+      <input type="submit" value="上传">
+    </form>
+    <div class="txbox">
+        <p>***发布</p>
+    </div>
+</div>
+    <footer class="footer">
+        <div class="qq">
+        <a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=n_bq5_ytr62r3_7usfzw8g" style="text-decoration:none;"><img src="http://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_12.png"/></a></div>
+    </footer>
+</body>
+</html>

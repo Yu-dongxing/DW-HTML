@@ -1,0 +1,263 @@
+@charset "utf-8";
+/* 设置全局样式 */
+body {
+    background-color: #FFFFFF;
+    color: #333;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0;
+    /*background: linear-gradient(90deg, rgba(44, 216, 213, 1) 0%, rgba(197, 193, 255, 1) 56%, rgba(255, 186, 195, 1) 100%);*/
+}
+header.mainBox {
+    /*background-color: #A3A3A3;*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+    margin: 0px auto 0 0px;
+    opacity: 1;
+    background: linear-gradient(90deg, rgba(44, 216, 213,1 ) 0%, rgba(197, 193, 255, 0.74) 56%, rgba(255, 186, 195, 0.74) 100%);
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    -webkit-box-shadow: 4px 6px 13px 5px rgba(0,0,0,0.20);
+    box-shadow: 4px 6px 13px 5px rgba(0,0,0,0.20);
+}
+header h1 {
+    margin: 0px;
+    opacity: 1;
+    font-family: "楷体";
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0px;
+    opacity: 1;
+}
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+    opacity: 1;
+    padding: 0px;
+}
+nav ul li a:hover {
+	/*background-color: #FFFFFF;*/
+	color: #5B89FF;
+}
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    padding: 0px;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    transform-origin: center center;
+    opacity: 1;
+}
+/* 设置段落样式 */
+p {
+	margin-bottom: 20px;
+}
+
+/* 设置节样式 */
+section {
+	margin-top: 100px;
+	/*max-width: 800px;*/
+	padding: 20px;
+	/*width: 80%;*/
+}
+
+section h2 {
+    border-bottom: 1px solid #ccc;
+    font-size: 24px;
+    margin-top: 0;
+    padding-bottom: 10px;
+    font-family: "云峰静龙行书";
+}
+
+/* 设置页脚样式 */
+footer {
+    background-color: #8A8A8A;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    opacity: 0.34;
+}
+footer:hover {
+    background-color: rgba(255,255,255,.5);
+    color: #464646;
+}
+
+
+
+video{  
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+    width: auto;
+    z-index:-11;
+    /*加滤镜*/
+    /*filter: blur(15px); //背景模糊设置 */
+    /*-webkit-filter: grayscale(100%);*/  
+    /*filter:grayscale(100%); //背景灰度设置*/         
+}  
+source{  
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+    width: auto;
+} 
+
+.bu {
+  --width: 100px;
+  --height: 35px;
+  --tooltip-height: 35px;
+  --tooltip-width: 90px;
+  --gap-between-tooltip-to-button: 18px;
+  --button-color: #1163ff;
+    tooltip-color: #fff;
+    width: var(--width);
+    height: var(--height);
+    background: var(--button-color);
+    position: relative;
+    text-align: center;
+    border-radius: 0.45em;
+    font-family: "Arial";
+    transition: background 0.3s;
+    margin-top: 5px;
+}
+
+.bu::before {
+  position: absolute;
+  content: attr(data-tooltip);
+  width: var(--tooltip-width);
+  height: var(--tooltip-height);
+  background-color: var(--tooltip-color);
+  font-size: 0.9rem;
+  color: #111;
+  border-radius: .25em;
+  line-height: var(--tooltip-height);
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+  left: calc(50% - var(--tooltip-width) / 2);
+}
+
+.bu::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: var(--tooltip-color);
+  left: calc(50% - 10px);
+  bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+}
+
+.bu::after,.button::before {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bu-wrapper,.text,.icon {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+
+.text {
+  top: 0
+}
+
+.text,.icon {
+  transition: top 0.5s;
+}
+
+.icon {
+  color: #fff;
+  top: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.bu:hover {
+  background: #6c18ff;
+}
+
+.bu:hover .text {
+  top: -100%;
+}
+
+.bu:hover .icon {
+  top: 0;
+}
+
+.bu:hover:before,.button:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.bu:hover:after {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.bu:hover:before {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
+/* === removing default button style ===*/
+.button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+/* button styling */
+.button {
+  --border-right: 6px;
+  --text-stroke-color: rgba(255,255,255,0.6);
+  --animation-color: #37D9FF;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+}

@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>位置信息上传系统</title>
+<script src="https://spjx.yuxs.top/htgl/api/jquery.min.js"></script>
+</head>
+<body>
+    <p onClick="xxcx()">查询</p>
+    <p id="output"></p>
+    <p id="wz"></p>
+    <script>
+    function xxcx(){
+              //为保证用户隐私，所有敏感数据json格式化加密后存储
+        //获取用户地理位置信息
+            if (navigator.geolocation) {  
+                navigator.geolocation.getCurrentPosition(showPosition);  
+                } else {  
+                        console.log("此游览器不支持地理定位");  
+                    }  
+                function showPosition(position) {  
+                var latitude = position.coords.latitude;  
+                var longitude = position.coords.longitude;  
+        // 格式化纬度和经度为三位数并输出  
+                var formattedLatitude = latitude.toFixed(3).slice(0,-2);  
+                var formattedLongitude = longitude.toFixed(3).slice(0,-2);  
+        // 在页面中的<p>标签中输出位置数据  
+                var output = document.getElementById("output");  
+                   // output.textContent = "你的位置：纬度: " + formattedLatitude + ", 经度: " + formattedLongitude;  
+                    output.textContent = "你的位置：纬度: " + latitude + ", 经度: " + longitude;  
+                var aaa = "你的位置：纬度: " + latitude + ", 经度: " + longitude;
+                    console.log(aaa);
+                var urlq="https://apis.map.qq.com/ws/geocoder/v1/?location="+latitude+","+longitude+"&key=KUQBZ-NJJ6C-UHR2R-A364Y-2NOJ6-KPFFG"+"&output=jsonp";
+                    console.log(urlq);
+                const yyyj = {  
+                    "url": urlq,  
+                    "method": 'GET',  
+                    "dataType": 'jsonp',  
+                };  
+                $.ajax(yyyj).done(function (data) {    
+                    var address=data.result.address;
+                    var routh=data.result.formatted_addresses.recommend;
+                    var from = data.result.formatted_addresses.standard_address;    
+                    var outwz = document.getElementById("wz");
+                    //outwz.textContent =address+",</br>"+from+",</br>"+routh;
+                    document.getElementById("wz").innerHTML= address+",<br>"+from+",<br>"+routh;  
+                    console.log(from);  
+                }).fail(function(jqXHR, textStatus, errorThrown) {    
+                    console.error("AJAX error: " + textStatus + ' : ' + errorThrown);    
+                });  
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>我的个人主页</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="file:///D|/DW   html/css/style.css"/>
+	<style type="text/css">
+	a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+a:active {
+    text-decoration: none;
+}
+    </style>
+<script language="javascript">
+// 进入页面就执行
+window.onload=function()
+{
+	let divTyping = document.getElementById('yuxs')
+	let i = 0,
+		timer = 0,
+		str = 'YUXS'
+	function typing()
+	{
+		if (i <= str.length)
+		{
+			divTyping.innerHTML = str.slice(0, i++) + '_'
+			timer = setTimeout(typing, 120)
+		}else
+		 {
+			divTyping.innerHTML = str //结束打字,移除 _ 光标
+			clearTimeout(timer)
+		}
+	}
+	typing();
+	setTimeout(function(){$("#xuna").show();},8000);
+}</script>
+</head>
+<body>
+    <!--<video id="v1" autoplay loop muted>
+      <source src="https://us-videos.dji.net/video_trans/05d282064a3648bdbfa44e230677d29b/1080.mp4" type="video/mp4"/>
+    </video>-->
+	<header class="mainBox">
+	  <h1 id="">YUXS</h1>
+        <nav>
+            <ul>
+              <li title="关于我的">
+                  <button data-text="Awesome" class="button">
+    <span class="actual-text">&nbsp;About&nbsp;</span>
+    <span class="hover-text" aria-hidden="true">&nbsp;About&nbsp;</span>
+</button>
+                  
+                </li>
+              <li title="返回首页">
+                  <div class="bu" data-tooltip="Size: 20Mb">
+                     <div class="bu-wrapper">
+                       <div class="text">App下载</div>
+                         <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17">
+                            </path>
+                              </svg>
+                         </span>
+                    </div>
+                </div>
+                </li>
+            </ul>
+        </nav>
+	</header>
+    
+	<section id="about-me">
+	   <h2>866666666666667</h2>
+	   <p>68686868686868686868687</p>
+    </section>
+	<section id="experience">
+      <h2></h2>
+      <p></p>
+	</section>
+    <section id="skills">
+		<h2></h2>
+		<p></p>
+	</section>
+    <section id="contact">
+		<h2></h2>
+		<p></p>
+	</section>
+<footer>
+		<p>YUXS&copy;2023</p>
+	</footer>
+  <script>  
+    // 点击事件监听器  
+    document.querySelector('.bu').addEventListener('click', function() {  
+      // 创建下载链接  
+      var link = document.createElement('a');  
+      link.href = "D:/桌面/所有文件夹/[suyin66.com]Fusionv2.0.apk"; // 替换为您的应用程序下载链接  
+      link.download = '[suyin66.com]Fusionv2.0.apk'; // 设置下载文件的名称  
+      link.click(); // 触发链接的点击事件以开始下载  
+    });  
+  </script> 
+</body>
+</html>

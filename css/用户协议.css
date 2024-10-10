@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+
+h1{
+    text-align: center;
+}
+body{
+    margin: 20px;
+    padding: 10px;
+}
+.zt{
+    font-style: normal;
+    font-weight: 600;
+    text-indent: 10px;
+    letter-spacing: 1px;
+    
+}
+.rq{
+    white-space: pre;
+}
+p{
+    text-indent:22.5pt;
+}
